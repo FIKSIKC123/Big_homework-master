@@ -1,0 +1,13 @@
+prod_name,TEXT,NOT NULL,PRIMERY KEY
+prod_type,TEXT,NOT NULL
+prod_amt INT
+prod_price INT
+prod_discont INT,NOT NULL<100
+ CREATE TRIGGER Products
+ [  AFTER ] [INSERT | UPDATE | DELETE]
+    ON [schema_name.]table_name
+	[REFERENCING <список_псевдонимов>]
+        [FOR EACH { ROW | STATEMENT}]
+  begin
+    <trigger_body>
+  end;
